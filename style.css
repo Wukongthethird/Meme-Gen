@@ -1,0 +1,54 @@
+input{
+  width: 85%;
+} 
+
+textarea{ 
+  width: 85%;
+}
+
+
+/* This deals w the actual memememe*/
+.memeTemplate {
+  display:flex;
+  flex-direction: column;
+  position: relative;
+  max-width: 1000px;
+  max-height: 1000px;
+  margin: 1rem;
+}
+
+.topText {
+  position: absolute;
+  display:inline-block;
+  top:0%;
+  color: white;
+  -webkit-text-stroke: 1px black;
+  width: 100%;
+  text-align: center;
+  word-wrap: break-word;
+  font: 4rem caption;
+} 
+
+.botText {
+  position: absolute;
+  display: inline-block;
+  bottom: 0px;
+  color: white;
+  -webkit-text-stroke: 1px black;
+  width: 100%;
+  text-align: center;
+  word-wrap: break-word;
+  font: 4rem caption;
+}
+  
+#printout {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.removed {
+  position: absolute;
+  opacity: 50%;
+  cursor: default;
+}

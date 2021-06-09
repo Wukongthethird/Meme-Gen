@@ -1,0 +1,46 @@
+form.addEventListener("submit", function(e){
+    e.preventDefault();
+
+    imgVar = document.getElementById('image').value
+    tTextVar = document.getElementById('top-text').value
+    bTextVar = document.getElementById('bottom-text').value
+
+    document.getElementById("printout").append(memes(tTextVar,bTextVar,imgVar));
+})
+
+
+function memes(tTVar, bTVar, imageVar ){
+    let actualMeme = document.createElement("div");
+    let tText = document.createElement("div");
+    let bText = document.createElement("div");
+    let img = document.createElement('img');
+    img.src = imageVar;
+
+    actualMeme.className = "memeTemplate";
+    actualMeme.id = "finishMeme"
+
+    tText.className = "topText";
+    tText.innerHTML = tTVar;
+
+    bText.className = "botText";
+    bText.innerHTML = bTVar;
+    
+    let remover = document.createElement("remover")
+    remover.innerText = "Delete";
+    remover.className = "removed";
+    
+    remover.addEventListener("click", function(e){
+        actualMeme.remove()
+    })
+
+    actualMeme.append(img);
+    actualMeme.append(tText);
+    actualMeme.append(bText);
+    actualMeme.append(remover);
+        
+    document.getElementById('image').value = ""
+    document.getElementById('top-text').value = ""
+    document.getElementById('bottom-text').value = ""
+
+    return actualMeme
+    }

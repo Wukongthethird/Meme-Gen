@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Meme Gen</title>
+</head>
+<body>
+    <header><h1 >Generating Meme</h1></header>
+    
+    <div >
+        <form id= "form">
+
+            <p><div style = "float: left;">Image</div>
+            <div align="right"><input type="url" id="image" ></div></p>
+
+            <p><div style = "float: left;">Top Text</div>
+            <div align="right"><textarea id="top-text"> </textarea></div></p>
+
+            <p><div style = "float: left;">Bottom Text</div>
+            <div align="right"><textarea id="bottom-text"></textarea></div> </p>
+
+            <button type="submit">Generate</button>
+
+        </form>
+    <hr>
+
+    </div>
+
+    <div id="printout">
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
